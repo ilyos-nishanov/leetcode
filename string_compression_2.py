@@ -6,15 +6,19 @@ def compress(chars: list[str]):
         else:
             my_dict[char] = 1
     
-    chars = []
+    chars = ''
     for key, value in my_dict.items():
-        chars.append(key)
-        if value >1:
-            for i in list(str(value)):
-                chars.append(i)
+        chars += key
+        # if value >1:
+        #     for i in list(str(value)):
+        chars += str(value)
 
             
-    return chars
+    return (chars)
+        
+        
+    
+    
 
 
 print(compress(["a","a","b","b","c","c","c"]))
